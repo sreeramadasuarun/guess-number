@@ -1,19 +1,29 @@
 //..........random value generated
-const randomNumber = Math.floor(Math.random() * 10 + 1);
+const randomNumber = Math.floor(Math.random() * 10) + 1;
 
-document.getElementById("submitguess").onclick = function () {
+//..........arrow function with onclick
+
+const submitguess = () => {
   //...... number by user....
-  const setuserguess = document.getElementById("userguess").value;
+  const setuserguess = Number(document.getElementById("userguess").value);
   // .....end....
-  if (setuserguess == randomNumber) {
+  if (setuserguess === randomNumber) {
     output.style.backgroundColor = "#274690";
     output.textContent = "CONGRATS!!! YOU GUESS IS RIGHT";
+  } else if (setuserguess == "") {
+    window.alert("TYPE A NUMBER 1-10 0NLY");
+  } else if (setuserguess > 10) {
+    output.style.backgroundColor = "var(--cr--red)";
+    output.textContent = "NOT TO EXCEED 10";
+  } else if (setuserguess < 1) {
+    output.style.backgroundColor = "var(--cr--red)";
+    output.textContent = "NOT TO EXCEED 10";
   } else if (setuserguess > randomNumber) {
     output.style.backgroundColor = "#9E829C";
     output.textContent = "TRY A SMALL NUMBER";
   } else {
     output.textContent = "TRY A HIGH NUMBER";
-    output.style.backgroundColor = "#FFBC0A";
+    output.style.backgroundColor = "#FE829c";
   }
 };
 //.........answer

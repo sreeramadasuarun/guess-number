@@ -33,16 +33,24 @@
         <section class="main-container">
           <h1 class="tittle">Guess The Number</h1>
 
-          <note> Select a random number between 1 - 10 </note>
+          <note> Guess a random number between 1 - 10 </note>
 
           <div class="form">
-            <label for="userguess">Enter a guess Number </label>
-            <input type="text" id="userguess" class="userguess" />
+            <input
+              min="1"
+              max="10"
+              type="text"
+              id="userguess"
+              class="userguess"
+              placeholder="Enter a guess number"
+              required
+            />
             <input
               type="button"
               value="Submit guess"
               class="guessSubmit"
               id="submitguess"
+              onclick="submitguess()"
             />
           </div>
           <div class="answer">
