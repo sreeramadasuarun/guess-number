@@ -34,8 +34,7 @@
           <h1 class="tittle">Guess The Number</h1>
 
           <note>
-            you have selected a random number between 1 - 10. See if you can
-            guess it.
+            Selected a random number between 1 - 10. See if you can guess it.
           </note>
 
           <div class="form">
@@ -48,14 +47,15 @@
               id="submitguess"
             />
           </div>
+          <div class="answer">
+            <p id="output"></p>
+          </div>
         </section>
-        <p id="output"></p>
         <button onclick="hint()" class="hint">Give Up</button>
       </div>
 
       <img src="./assets/images/left-png.png" alt="" />
     </main>
-
     <!-- custom js -->
     <script src="./script/app.js"></script>
   </body>
