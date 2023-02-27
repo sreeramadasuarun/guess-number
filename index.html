@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/game (1).png" />
+
+    <title>Number Game</title>
+
+    <!-- FontAwesome CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <img src="./assets/images/left-png.png" alt="" />
+
+      <div class="card">
+        <section class="main-container">
+          <h1 class="tittle">Guess The Number</h1>
+
+          <note>
+            you have selected a random number between 1 - 10. See if you can
+            guess it.
+          </note>
+
+          <div class="form">
+            <label for="userguess">Enter a guess Number </label>
+            <input type="text" id="userguess" class="userguess" />
+            <input
+              type="button"
+              value="Submit guess"
+              class="guessSubmit"
+              id="submitguess"
+            />
+          </div>
+        </section>
+        <p id="output"></p>
+        <button onclick="hint()" class="hint">Give Up</button>
+      </div>
+
+      <img src="./assets/images/left-png.png" alt="" />
+    </main>
+
+    <!-- custom js -->
+    <script src="./script/app.js"></script>
+  </body>
+</html>
