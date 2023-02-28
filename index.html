@@ -27,10 +27,23 @@
   </head>
   <body>
     <main class="container">
-      <img class="card-image" src="./assets/images/left-png.png" alt="" />
+      <figure class="img-card">
+        <img
+          class="card-image"
+          src="./assets/images/left-png.png"
+          alt="image"
+        />
+      </figure>
 
       <div class="card">
         <section class="main-container">
+          <div class="score">
+            <p class="guess">Remaining Guess: <strong id="guess">0</strong></p>
+            <p class="high-score">
+              high-score: <strong id="totalscore">0</strong>
+            </p>
+          </div>
+
           <h1 class="tittle">Guess The Number</h1>
 
           <note> Guess a random number between 1 - 10 </note>
@@ -40,7 +53,7 @@
               min="1"
               max="11"
               type="number"
-              id="userguess"
+              id="presentuserguess"
               class="userguess"
               placeholder="Enter a guess number"
               required
@@ -49,18 +62,30 @@
               type="button"
               value="Submit guess"
               class="guessSubmit"
-              id="submitguess"
+              id="usersubmitguess"
               onclick="submitguess()"
             />
-          </div>
-          <div class="answer">
-            <p id="output"></p>
+            <div class="answer">
+              <p id="output"></p>
+            </div>
+            <input
+              type="button"
+              value="Reset"
+              class="reset"
+              id="gamereset"
+              onclick="Reset()"
+            />
           </div>
         </section>
         <button onclick="hint()" class="hint">Give Up</button>
       </div>
-
-      <img class="card-image" src="./assets/images/left-png.png" alt="" />
+      <figure class="img-card">
+        <img
+          class="card-image"
+          src="./assets/images/left-png.png"
+          alt="image"
+        />
+      </figure>
     </main>
     <!-- custom js -->
     <script src="./script/app.js"></script>

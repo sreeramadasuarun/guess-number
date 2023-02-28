@@ -32,7 +32,7 @@ html {
 
 img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 body {
@@ -86,6 +86,8 @@ body {
   padding: 15px 32px;
   cursor: pointer;
   box-shadow: var(--light-shadow);
+  width: 11rem;
+  display: block;
 }
 .guessSubmit:hover {
   box-shadow: var(--dark-shadow);
@@ -129,13 +131,14 @@ input::-webkit-inner-spin-button {
   font-size: 0.85rem;
 }
 #output {
-  padding: 1rem 7rem;
+  padding: 1rem 3rem;
   border-radius: 1rem;
   color: white;
 }
 .answer {
   display: flex;
   justify-content: center;
+  margin: 1rem 0;
 }
 
 @media only screen and (max-width: 500px) {
@@ -144,19 +147,51 @@ input::-webkit-inner-spin-button {
     width: 100%;
   }
   .card-image {
-    width: 2rem;
+    width: 100vw;
+    height: 6rem;
+    padding: 0.2rem;
   }
   .tittle {
     font-size: 1.5rem;
   }
   .container {
-    width: 90vw;
-    margin: 2rem 0;
+    flex-direction: column;
   }
   .main-container {
-    padding: 0.2rem;
+    justify-content: center;
+    padding: 0 0rem;
   }
   .hint {
     margin: 1rem 0 1rem 1rem;
   }
+  #output {
+    padding: 0.5rem 4rem;
+  }
+  /* .card {
+    margin: 0 2rem;
+  } */
+}
+/* .guess {
+  position: absolute;
+  top: 50%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+} */
+.score {
+  display: flex;
+  justify-content: center;
+  gap: 11rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.reset {
+  background-color: var(--cr--red);
+  border-radius: 0.6rem;
+  border: none;
+  color: var(--cr--white);
+  padding: 15px 32px;
+  cursor: pointer;
+  box-shadow: var(--light-shadow);
+  width: 11rem;
+  display: none;
 }
