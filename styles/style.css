@@ -167,16 +167,11 @@ input::-webkit-inner-spin-button {
   #output {
     padding: 0.5rem 4rem;
   }
-  /* .card {
+  .card {
     margin: 0 2rem;
-  } */
+  }
 }
-/* .guess {
-  position: absolute;
-  top: 50%;
-  left: 18%;
-  transform: translate(-50%, -50%);
-} */
+
 .score {
   display: flex;
   justify-content: center;

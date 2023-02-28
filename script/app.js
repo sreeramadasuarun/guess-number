@@ -2,7 +2,6 @@
 
 //..........random value generated
 let randomNumber = Math.floor(Math.random() * 10) + 1;
-const score = document.getElementById("totalscore");
 
 let setguess = 5;
 let setscore = 0;
@@ -26,10 +25,9 @@ const submitguess = () => {
       output.style.backgroundColor = "#274690";
 
       gamereset.style.display = "block";
-      output.textContent =
-        "CONGRATULATIONS!!! YOU GUESSED IT RIGHT  " + setguess + " GUESS ";
+      output.textContent = "CONGRATULATIONS!!! YOU GUESSED IT RIGHT";
       //.............pending work on score ++
-      setscore.innerHTML = setguess;
+      totalscore.textContent = setguess;
       //..............
       this.usersubmitguess.style.display = "none";
     } else if (setuserguess == "") {
