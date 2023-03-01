@@ -4,7 +4,6 @@
 let randomNumber = Math.floor(Math.random() * 10) + 1;
 
 let setguess = 5;
-let setscore = 0;
 
 guess.textContent = setguess;
 
@@ -20,13 +19,13 @@ const submitguess = () => {
     output.textContent = " GAME OVER: " + setguess + " GUESS ";
     gamereset.style.display = "block";
     output.style.backgroundColor = "var(--cr--red)";
+    this.usersubmitguess.style.display = "none";
   } else {
     if (setuserguess === randomNumber) {
       output.style.backgroundColor = "#274690";
-
       gamereset.style.display = "block";
       output.textContent = "CONGRATULATIONS!!! YOU GUESSED IT RIGHT";
-      //.............pending work on score ++
+      //.............work on score ++
       totalscore.textContent = setguess;
       //..............
       this.usersubmitguess.style.display = "none";
@@ -45,7 +44,6 @@ const submitguess = () => {
       setguess--;
     }
   }
-
   this.presentuserguess.value = "";
   console.log(setguess);
   guess.textContent = setguess;
