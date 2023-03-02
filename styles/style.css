@@ -172,13 +172,6 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.score {
-  display: flex;
-  justify-content: center;
-  gap: 11rem;
-  margin-top: 1rem;
-  font-size: 1.2rem;
-}
 .reset {
   background-color: var(--cr--red);
   border-radius: 0.6rem;
@@ -189,4 +182,24 @@ input::-webkit-inner-spin-button {
   box-shadow: var(--light-shadow);
   width: 11rem;
   display: none;
+}
+.img-card {
+  position: relative;
+  text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(232, 224, 247);
+  border-radius: 1rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  line-height: 2.7rem;
+}
+strong {
+  font-size: 2rem;
+  color: #ff0000;
 }
